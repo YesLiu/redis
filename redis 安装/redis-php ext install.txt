@@ -1,0 +1,35 @@
+#php 安装redis扩展
+
+下载
+
+wget https://github.com/nicolasff/phpredis/archive/2.2.4.tar.gz
+
+tar zxvf 2.2.4.tar.gz
+
+cd phpredis-2.2.4
+
+phpize
+
+如果没有phpize   安装php-devel
+
+yum -y install php-devel
+
+./configrue   //php是默认安装的 不需要带参数
+
+make&&make install
+
+安装好了以后会在 /usr/lib64/php/modules/ 文件中出现 redis.so
+
+
+修改配置文件
+
+cd /etc/php.d/
+在此文件下随便复制一个文件命名为 redis.ini
+
+vi redis.ini
+
+修改为extension=redis.so
+
+至此
+
+ 
